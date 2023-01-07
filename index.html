@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css"/>
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <img src="images/logo.svg"/>
+        </header>
+        <div class="bg"></div>
+        <section>
+            <p class="pp">WE'RE</p>
+            <p class="p">COMING</p>
+            <p class="p">SOON</p>
+            <p class="p2">
+                Hello fellow shoppers! We're currently building our new fashion store. 
+  Add your email below to stay up-to-date with announcements and our launch deals.
+
+            </p>
+            <div class="input">
+                <input id="input" type="email" placeholder="Email Address"/>
+                <img src="images/icon-error.svg" id="image"/>
+                <button id="boton">
+                    Valid 
+                </button>
+            </div>
+            <div class="error">
+                <p id="error">
+                    please provide a valid email
+                </p>
+            </div>
+        </section>
+    </div>
+    <script>
+        var input = document.getElementById("input");
+        var btn = document.getElementById("boton");
+        var img = document.getElementById("image");
+        var p = document.getElementById("error");
+        btn.onclick = function(){
+            if(input.value.length < 1){
+                p.classList.add("active") ;
+                btn.classList.add("boton");
+            }else{
+                p.classList.remove("active") ;
+                btn.classList.remove("boton");
+            }
+        }
+    </script>
+</body>
+</html>
